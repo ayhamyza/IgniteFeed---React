@@ -123,5 +123,25 @@
     font-weight: bold;
 }
 
+.commentForm button {
+    width: 10.8rem;
+    height: 5.0rem;
+    border-radius: 8px;
 
+    background-color: var(--green-300);
+    color: var(--white);
+    border: none;
+    
+    font-weight: bold;
+
+    transition: 
+    color 0.1s,
+    background-color 0.1s;
+    
+}
+
+.commentForm button:hover {
+    background-color: var(--green-500);
+    cursor: pointer;
+}
 
