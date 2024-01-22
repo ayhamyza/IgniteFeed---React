@@ -90,6 +90,15 @@
     color: var(--green-300);
 }
 
+/*COMMENT FORM*/
+
+.commentForm {
+    width: 100%;
+    padding-top: 2.4rem ;
+    margin-top: 2.4rem;
+    border-top: 1px solid var(--gray-600);
+
+}
 
 
 
