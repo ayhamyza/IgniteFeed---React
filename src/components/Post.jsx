@@ -25,6 +25,17 @@ export function Post() {
             <a href="">#nlw</a>
         </p>
       </div>
+
+      <form className= {styles.commentForm }>
+        
+        <strong 
+        className= { styles.commentFormTitle }>
+        Deixe seu Feedback  
+        </strong>
+        
+        <textarea placeholder='Deixe um comentário'/>
+
+      </form>
     </article>
   )
 }
