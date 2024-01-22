@@ -33,7 +33,7 @@ export function Post() {
         Deixe seu Feedback  
         </strong>
         
-        <textarea placeholder='Deixe um comentário'/>
+        <textarea placeholder='Deixe um comentário' />
 
         <button type="submit">Publicar</button>
       </form>

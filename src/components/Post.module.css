@@ -107,15 +107,29 @@
     min-height: 9.6rem;
 
     background-color: var(--gray-900);
-    border: 1px solid var(--green-500);
+    border: none;
     border-radius: 8px;
 
+    transition: 
+    color 0.1s,
+    border 0.1s;
 }
 
-.commentForm textarea::placeholder{
-    color: var(--gray-100);
+.commentForm textarea:hover {
+    border: 1px solid var(--green-500);
+}
+
+.commentForm textarea::placeholder {
+    color: var(--gray-500);
     padding-top: 1.3rem;
     padding-left: 1.6rem;
+
+    transition: 
+    color 0.1s;
+}
+
+.commentForm textarea:hover::placeholder{
+    color: var(--gray-100);
 }
 
 .commentFormTitle {
