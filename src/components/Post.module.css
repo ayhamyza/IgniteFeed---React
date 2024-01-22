@@ -103,6 +103,10 @@
     gap: 1.6rem;
 }
 
+.commentFormTitle {
+    color: var(--gray-100);
+    font-weight: bold;
+}
 
 
 
