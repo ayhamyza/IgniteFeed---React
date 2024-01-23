@@ -110,6 +110,9 @@
     border: none;
     border-radius: 8px;
 
+    resize: none;
+    line-height: 2.2rem;
+
     transition: 
     color 0.1s,
     border 0.1s;
@@ -149,9 +152,7 @@
     font-weight: bold;
 
     transition: 
-    color 0.1s,
     background-color 0.1s;
-    
 }
 
 .commentForm button:hover {
