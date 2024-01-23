@@ -160,3 +160,12 @@
     cursor: pointer;
 }
 
+.commentForm footer {
+    visibility: hidden;
+    max-height: 0;
+}
+
+.commentForm:focus-within footer {
+    visibility: visible;
+    max-height: none;
+}
