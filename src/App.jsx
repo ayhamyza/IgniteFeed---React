@@ -17,7 +17,7 @@ export function App() {
 
         <main>
           <Post
-            author = "Ayhamyza"
+            author = "Ayhamyza Ellen"
             content = "textoLorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reiciendis, corrupti atque tempora, possimus fuga ullam debitis pariatur quibusdam optio voluptatem iusto doloribus perferendis ipsum similique vitae expedita nihil labore. qualquer" 
           />
           <Post
