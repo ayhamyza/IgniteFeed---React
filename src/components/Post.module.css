@@ -144,6 +144,7 @@
     width: 10.8rem;
     height: 5.0rem;
     border-radius: 8px;
+    margin-bottom: 3.2rem;
 
     background-color: var(--green-300);
     color: var(--white);
