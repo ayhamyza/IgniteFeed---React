@@ -2,16 +2,16 @@ import { Avatar } from './Avatar.jsx';
 import { Comment } from './Comment.jsx';
 import styles from './Post.module.css';
 
-export function Post(props) {
-  console.log(props);
+export function Post({ author }) {
+
   return (
-    <article className={styles.post}>
+    <article className={styles.post}> 
       <header>
         <div className={styles.author}>
-          <Avatar src="https://github.com/ayhamyza.png" />
-          <div className={styles.authorInfo}>
-            <strong>Ayhamyza</strong>
-            <span>Web Developer</span>
+          <Avatar src={author.avatarUrl} />
+          <div className={styles.authorInfo}> 
+            <strong>{author.name}</strong>
+            <span>{author.role}</span>
           </div>
         </div>
 
