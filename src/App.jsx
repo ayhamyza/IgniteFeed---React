@@ -6,6 +6,40 @@ import './global.css'
 
 import { Sidebar } from './components/Sidebar'
 
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: "https://github.com/ayhamyza.png",
+      name: 'Ayhamyza Ellen',
+      role: 'Full-Stack Developer'
+    },
+
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋', },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀', },
+      { type: 'link', content: 'jane.design/doctorcare'},
+    ],
+    publishedAt: new Date ('2023-12-10 20:00:00')
+  },
+
+  {
+    id: 2,
+    author: {
+      avatarUrl: "https://github.com/maykbrito.png",
+      name: 'Mayk Brito',
+      role: 'Educator Rocketseat'
+    },
+
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋', },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀', },
+      { type: 'link', content: 'jane.design/doctorcare'},
+    ],
+    publishedAt: new Date ('2024-01-01 18:00:00')
+  },
+];
+
 export function App() {
   return(
     
@@ -16,18 +50,15 @@ export function App() {
         <Sidebar/>
 
         <main>
-          <Post
-            author = "Ayhamyza Ellen"
-            content = "textoLorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reiciendis, corrupti atque tempora, possimus fuga ullam debitis pariatur quibusdam optio voluptatem iusto doloribus perferendis ipsum similique vitae expedita nihil labore. qualquer" 
-          />
-          <Post
-            author = "will"
-            content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reiciendis, corrupti atque tempora, possimus fuga ullam debitis pariatur quibusdam optio voluptatem iusto doloribus perferendis ipsum similique vitae expedita nihil labore."
-          />
-          <Post
-            author = "aracy"
-            content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reiciendis, corrupti atque tempora, possimus fuga ullam debitis pariatur quibusdam optio voluptatem iusto doloribus perferendis ipsum similique vitae expedita nihil labore."
-          />
+          {posts.map(post => {
+            return (
+              <Post
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            )
+          })}
 
         </main>
       </div>    
