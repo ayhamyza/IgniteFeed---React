@@ -1,9 +1,15 @@
+import { format } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+
 import { Avatar } from './Avatar.jsx';
 import { Comment } from './Comment.jsx';
 
 import styles from './Post.module.css';
 
-export function Post({ author }) {
+export function Post({ author, publishedAt }) {
+  const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
+    locale: ptBR,
+  });
 
   return (
     <article className={styles.post}> 
@@ -16,7 +22,7 @@ export function Post({ author }) {
           </div>
         </div>
 
-        <time title="11 de Maio às 08:13h" dateTime="2022-05-11 08:13:00">Publicado há 1h</time>
+        <time title= { publishedDateFormatted } dateTime="2022-05-11 08:13:00">Publicado há 1h</time>
       </header>
 
       <div className={styles.content}>
