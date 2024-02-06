@@ -6,7 +6,7 @@ import { Comment } from './Comment.jsx';
 
 import styles from './Post.module.css';
 
-export function Post({ author, publishedAt }) {
+export function Post({ author, publishedAt, content }) {
   const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
     locale: ptBR,
   });
@@ -28,21 +28,21 @@ export function Post({ author, publishedAt }) {
           </div>
         </div>
 
-        <time title= { publishedDateFormatted } dateTime="2022-05-11 08:13:00">
+        <time title= { publishedDateFormatted } dateTime= { publishedAt.toISOString()}>
           { publishedDateRelativeToNow }
         </time>
       </header>
 
       <div className={styles.content}>
-        <p>Fala galeraa 👋</p>
-        <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
-        <p>👉<a href="" className= { styles.contentHover }>jane.design/doctorcare</a></p>
-        <p className= {styles.tags}>
-            <a href="">#novoprojeto</a>
-            <a href="">#rocketseat</a>
-            <a href="">#nlw</a>
-        </p>
+        {content.map(line => { 
+          if (line.type === 'paragraph') {
+            return <p>{line.content}</p>;
+          } else if (line.type === 'link') { 
+            return <p><a href="#">{line.content}</a></p>
+          }
+        })}
       </div>
+
 
       <form className= {styles.commentForm }>
         
